@@ -8,7 +8,7 @@
 Shared HTTP server for the LegionIO framework. Any extension can register Rack routes at boot and a single WEBrick/Puma server handles all inbound HTTP traffic. Provides a lightweight alternative to the full Sinatra-based API in LegionIO for extensions that need custom HTTP endpoints.
 
 **GitHub**: https://github.com/LegionIO/legion-web
-**Version**: 0.1.0
+**Version**: 0.1.1
 **License**: Apache-2.0
 
 ## Architecture
@@ -48,6 +48,8 @@ Legion::Web (singleton module)
 ## Role in LegionIO
 
 Optional HTTP server for extensions that need custom routes outside of the main LegionIO REST API. Extensions call `Legion::Web.register` during their boot phase to add routes.
+
+Default port is **4568** (separate from the main daemon REST API on 4567). Both can run simultaneously.
 
 ---
 

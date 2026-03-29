@@ -12,7 +12,7 @@ Legion::Web.register do |r|
   r.get  '/health',          to: 'Legion::Web::Health#check'
 end
 
-Legion::Web.start(port: 4568)
+Legion::Web.start(port: 4568)   # default port; main daemon uses 4567
 ```
 
 ## Architecture
